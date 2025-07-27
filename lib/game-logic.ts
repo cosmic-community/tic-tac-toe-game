@@ -20,7 +20,13 @@ export function checkWinner(board: Board): Player | null {
 
   for (const combination of winningCombinations) {
     const [a, b, c] = combination;
-    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+    // Add null checks to prevent undefined index type errors
+    if (
+      a != null && b != null && c != null &&
+      board[a] && 
+      board[a] === board[b] && 
+      board[a] === board[c]
+    ) {
       return board[a];
     }
   }
@@ -108,7 +114,13 @@ export function getWinningSquares(board: Board): number[] {
 
   for (const combination of winningCombinations) {
     const [a, b, c] = combination;
-    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+    // Add null checks to prevent undefined index type errors
+    if (
+      a != null && b != null && c != null &&
+      board[a] && 
+      board[a] === board[b] && 
+      board[a] === board[c]
+    ) {
       return combination;
     }
   }
