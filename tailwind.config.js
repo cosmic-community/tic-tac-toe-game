@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        border: '#e5e7eb', // gray-200 equivalent for border color
         primary: '#2563eb',
         secondary: '#64748b',
         success: '#10b981',
